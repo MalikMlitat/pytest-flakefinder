@@ -227,3 +227,6 @@ def test_fixture_parametrization_with_similar_test_names(testdir):
         ['*::test_something?%d? PASSED*' % i for i in range(num_runs)]
     )
     assert result.ret == 0
+
+def test_mock_a_failing_test_to_test_CI(testdir):
+    assert False, "I am failing now"
